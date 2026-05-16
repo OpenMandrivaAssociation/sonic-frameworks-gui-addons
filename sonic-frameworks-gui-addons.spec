@@ -51,18 +51,20 @@ Conflicts: kf6-kguiaddons
 %description
 Utilities for graphical user interfaces
 
-%package -n kde-geo-scheme-handler
-Summary: Geo scheme handler for KDE (5 and 6)
+%package -n sonic-geo-scheme-handler
+Summary: Geo scheme handler for SonicDE
 Group: System/Libraries
 
-%description -n kde-geo-scheme-handler
-Geo scheme handler for KDE (5 and 6)
+Conflicts: kde-geo-scheme-handler
+
+%description -n sonic-geo-scheme-handler
+%summary
 
 %package -n %{libname}
 Summary: Utilities for graphical user interfaces
 Group: System/Libraries
 Requires: %{name} = %{EVRD}
-Requires: kde-geo-scheme-handler = %{EVRD}
+Requires: sonic-geo-scheme-handler = %{EVRD}
 Conflicts: %{_lib}KF6GuiAddons
 
 %description -n %{libname}
@@ -90,7 +92,7 @@ Requires: %{libname} = %{EVRD}
 %files
 %{_datadir}/qlogging-categories6/kguiaddons.*
 
-%files -n kde-geo-scheme-handler
+%files -n sonic-geo-scheme-handler
 %{_bindir}/kde-geo-uri-handler
 %{_datadir}/applications/google-maps-geo-handler.desktop
 %{_datadir}/applications/openstreetmap-geo-handler.desktop
