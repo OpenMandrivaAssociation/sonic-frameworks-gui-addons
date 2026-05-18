@@ -89,6 +89,10 @@ Requires: %{libname} = %{EVRD}
 %description -n python-sonic-gui-addons
 %summary
 
+%install -a
+rm -rf %{buildroot}/%{_libdir}/cmake
+rm -rf %{buildroot}/%{_libdir}/pkgconfig
+
 %files
 %{_datadir}/qlogging-categories6/kguiaddons.*
 
@@ -101,8 +105,10 @@ Requires: %{libname} = %{EVRD}
 
 %files -n %{devname}
 %{_includedir}/KF6/KGuiAddons
-%{_libdir}/cmake/KF6GuiAddons
-%{_libdir}/pkgconfig/KF6GuiAddons.pc
+
+# pending rename
+# %{_libdir}/cmake/KF6GuiAddons
+# %{_libdir}/pkgconfig/KF6GuiAddons.pc
 
 %files -n %{libname}
 %{_libdir}/libKF6GuiAddons.so*
