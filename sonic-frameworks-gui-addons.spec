@@ -7,7 +7,7 @@
 
 Name: sonic-frameworks-gui-addons
 Version: 6.28.0
-Release: %{?git:0.%{git}.}1
+Release: %{?git:0.%{git}.}2
 URL: https://github.com/Sonic-DE/sonic-frameworks-gui-addons
 Source0: %url/archive/%version/%name-%version.tar.gz
 Summary: Utilities for graphical user interfaces
