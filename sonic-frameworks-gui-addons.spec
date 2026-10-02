@@ -105,6 +105,7 @@ rm -rf %{buildroot}/%{_libdir}/pkgconfig
 
 %files -n %{devname}
 %{_includedir}/KF6/KGuiAddons
+%{_qtdir}/metatypes/qt6kf6guiaddons_metatypes.json
 
 # pending rename
 # %{_libdir}/cmake/KF6GuiAddons
